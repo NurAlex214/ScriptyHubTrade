@@ -1,0 +1,119 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+-- Check if SecureMode is available
+if Rayfield.SecureMode then 
+    Rayfield:SecureMode() 
+    print("Secure Mode enabled!") 
+else 
+    print("Secure Mode is not available in this version of Rayfield.") 
+end
+
+-- Create the main window 
+local Window = Rayfield:CreateWindow({ 
+    Name = "Adopt Me Trade Scam 💸 🐕", 
+    LoadingTitle = "Loading...", 
+    LoadingSubtitle = "Please wait", 
+    ConfigurationSaving = { 
+        Enabled = true, 
+        FolderName = "Rayfield", 
+        FileName = "MyConfig" 
+    }, 
+    Discord = { 
+        Enabled = false, 
+        Invite = "YourDiscordInviteHere", 
+        RememberJoins = true 
+    }, 
+    KeySystem = false 
+})
+
+-- Create a tab in the window 
+local TradeScamTab = Window:CreateTab("Trade Scam 🐕")
+
+-- Create a button to freeze trade
+local FreezeTradeButton = TradeScamTab:CreateButton({ 
+    Name = "Freeze Trade ❄️", 
+    Callback = function() 
+        print("Easy Trade!!") 
+        
+        -- Send notification when the button is clicked
+        Rayfield:Notify({
+            Title = " ⚠️ FREEZING TRADE ⚠️ ",
+            Content = " ⚠️FREEZING THE TRADE ⚠️ Please wait 2-5 minutes for it to work. ⏳",
+            Duration = 6.5,
+            Image = 4483362458,
+            Actions = { 
+                -- You can add notification buttons here if needed
+            },
+        })
+    end,
+})
+
+-- Create a Force Accept Trade button
+local ForceAcceptButton = TradeScamTab:CreateButton({ 
+    Name = "Force Accept Trade 💥", 
+    Callback = function() 
+        print("Forcing accept trade...") 
+        
+        -- Send notification when the button is clicked
+        Rayfield:Notify({
+            Title = " 🚨 FORCE ACCEPT TRADE 🚨 ",
+            Content = "Forcing accept trade. Please wait for the process to complete. ⏳",
+            Duration = 6.5,
+            Image = 4483362458,
+            Actions = { 
+                -- You can add notification buttons here if needed
+            },
+        })
+    end,
+})
+
+-- Create a button for removing the pet on the 2nd trade
+local RemovePetOnSecondTradeButton = TradeScamTab:CreateButton({
+    Name = "Remove Pet on 2nd Trade 🐾",
+    Callback = function()
+        print("Removing pet on 2nd trade...")
+
+        -- Send notification when the button is clicked
+        Rayfield:Notify({
+            Title = " 🚨 REMOVE PET ON 2ND TRADE 🚨 ",
+            Content = "Removing pet on the second trade. Please wait for the process to complete. ⏳",
+            Duration = 6.5,
+            Image = 4483362458,
+            Actions = {
+                -- You can add notification buttons here if needed
+            },
+        })
+        wait(5)
+        Rayfield:Notify({
+            Title = " ✅ YOU CAN NOW REMOVE YOUR PET✅ ",
+            Content = "You can remove the pet now. 😊",
+            Duration = 6.5,
+            Image = 4483362458,
+            Actions = {
+                -- You can add notification buttons here if needed
+            },
+        })
+    end,
+})
+
+-- Create a new tab for AutoFarm
+local AutoFarmTab = Window:CreateTab("AutoFarm 🌾")
+
+-- Add elements for AutoFarm
+local StartAutoFarmButton = AutoFarmTab:CreateButton({ 
+    Name = "Start AutoFarm 🚀", 
+    Callback = function() 
+        print("Starting AutoFarm...") 
+        
+        -- Send notification when the button is clicked
+        Rayfield:Notify({
+            Title = " 🌾 AUTOFARM STARTED 🌾 ",
+            Content = "AutoFarm has been started. Good luck! 🍀",
+            Duration = 6.5,
+            Image = 4483362458,
+            Actions = { 
+                -- You can add notification buttons here if needed
+            },
+        })
+    end,
+})
